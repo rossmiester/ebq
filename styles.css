@@ -1,0 +1,257 @@
+/******* landing page styles *******/
+
+:root {
+    /* ---------------------
+        color variables
+    ---------------------- */ 
+
+    /* whites */
+    --white: #FFFFFF;
+
+    /* blues */
+    --lt-blue: #EBF4FF;
+    --mid-blue: #2979EC;
+    --dk-blue: #0A459E;
+
+    /* yellows */
+    --yellow: #FFBE3C;
+
+    /* ---------------------
+        font variables
+    ---------------------- */ 
+
+    --font-open-sans-reg: "Open Sans", sans-serif;
+
+    --font-weight-lt: 300;
+    --font-weight-reg: 400;
+    --font-weight-med: 500;
+    --font-weight-semi-bold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extra-bold: 800;
+
+}
+
+/* globals */
+
+html {
+    font-size: 16px; /* 1em = 16px */
+}
+
+body {
+    font-family: var(--font-open-sans-reg);
+    font-weight: var(--font-weight-reg);
+    text-align: center;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--font-weight-reg);
+    margin: 40px 0 30px 0;
+    letter-spacing: -1px;
+    line-height: 1.2em;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.5em; 
+}
+
+.h3 {
+    font-size: 2.6em;
+}
+
+p {
+    font-size: 1.125em;
+    line-height: 1.42em;
+}
+
+strong {
+    font-weight: var(--font-weight-bold);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        text-align: initial;
+    }
+}
+
+/* layout */
+
+.col {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 40px;
+}
+
+.pt-30 {
+    padding-top: 30px;
+}
+
+.pt-60 {
+    padding-top: 60px;
+}
+
+.pb-40 {
+    padding-bottom: 40px;
+}
+
+.v-align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.full-width-row {
+    width: 100vw;
+    position: relative;
+    left: calc(50%);
+    transform: translate(-50vw);
+}
+
+@media screen and (min-width: 540px) {
+    span.br {
+        display: block;
+    }   
+}
+
+@media screen and (min-width: 1024px) {
+    .col-md-4 {
+        width: 33.33%;
+    }   
+
+    .col-md-5 {
+        width: 41.67%;
+    }
+
+    .col-md-6 {
+        width: 50%;
+    }
+
+    .offset-md-1 {
+        margin-left: 8.33%;
+    }
+
+    .pt-md-70 {
+        padding-top: 70px;
+    }
+    
+}
+
+/* header */
+
+header {
+    background-color: var(--lt-blue);
+}
+
+header .container {
+    flex-direction: row;
+}
+
+#site-header-inner {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    max-height: 50px;
+}
+
+/* main */
+
+header,
+.content-wrapper {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    margin: 0 auto;
+}
+
+header .container {
+    max-width: 1440px;
+}
+
+section .container,
+footer .container {
+    max-width: 1200px;
+}
+
+#home-market-research {
+    background-color: var(--lt-blue);
+} 
+
+#home-marketing-tools .container,
+#home-building-team .container {
+    flex-direction: column-reverse;
+}
+
+@media screen and (min-width: 1024px) {
+    .container,
+    #home-marketing-tools .container,
+    #home-building-team .container {
+        flex-direction: row;
+        gap: 60px;
+    }
+}
+
+/* footer */
+
+footer {
+    display: flex;
+    align-items: center;
+    background-color: var(--dk-blue);
+    color: var(--white);
+    height: 350px;
+}
+
+footer h3 {
+    margin-top: 0;
+}
+
+#site-footer-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* buttons */
+
+.btn {
+    padding: 10px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: var(--font-open-sans-reg);
+    font-weight: var(--font-weight-semi-bold);
+    font-size: .875em;
+}
+
+.btn--blue {
+    background-color: var(--mid-blue);
+    color: var(--white);
+}
+
+.btn--yellow {
+    background-color: var(--yellow);
+    color: var(--white);
+}
+
+.btn--text-dk-blue {
+    color: var(--dk-blue);
+}
+
+footer .btn {
+    font-weight: var(--font-weight-bold);
+}
